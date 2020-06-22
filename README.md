@@ -1,7 +1,7 @@
 # kubHello
 CDK8s Hello Sample app. 
 
-========================================================================================================
+======================================================================
 
  Your cdk8s typescript project is ready!
 
@@ -23,4 +23,4 @@ CDK8s Hello Sample app.
    npm run upgrade       Upgrade cdk8s modules to latest version
    npm run upgrade:next  Upgrade cdk8s modules to latest "@next" version (last commit)
 
-========================================================================================================
+================================================================
