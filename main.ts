@@ -6,7 +6,6 @@ import { Service, IntOrString, Deployment  } from './imports/k8s';
 export class MyChart extends Chart {
   constructor(scope: Construct, name: string) {
     super(scope, name);
-
     // define resources here
     const label = { app: 'hello-k8s' };
 
@@ -34,7 +33,7 @@ export class MyChart extends Chart {
                 ports: [ { containerPort: 8080 } ],
                 env: [{
                     name: "MESSAGE",
-                    value: "I just deployed this on Kubernetes using CDK for Kubernetes"
+                    value: "I just deployed this on AWS EKS using CDK for Kubernetes"
 
                 }]
               }
