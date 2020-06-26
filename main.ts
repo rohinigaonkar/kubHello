@@ -1,7 +1,7 @@
 import { Construct } from 'constructs';
 import { App, Chart } from 'cdk8s';
 
-import { Service, IntOrString, Deployment  } from './imports/k8s';
+import { Service, IntOrString, Deployment } from './imports/k8s';
 
 export class MyChart extends Chart {
   constructor(scope: Construct, name: string) {
@@ -12,7 +12,9 @@ export class MyChart extends Chart {
     new Service(this, 'service', {
       spec: {
         type: 'LoadBalancer',
-        ports: [ { port: 80, targetPort: IntOrString.fromNumber(8080) } ],
+        ports: [{ 
+          port: 80, 
+          targetPort: IntOrString.fromNumber(8080) }],
         selector: label
       }
     });
@@ -30,10 +32,10 @@ export class MyChart extends Chart {
               {
                 name: 'hello-kubernetes',
                 image: 'paulbouwer/hello-kubernetes:1.8',
-                ports: [ { containerPort: 8080 } ],
+                ports: [{ containerPort: 8080 }],
                 env: [{
-                    name: "MESSAGE",
-                    value: "I just deployed this on AWS EKS using CDK for Kubernetes"
+                  name: "MESSAGE",
+                  value: "I just deployed this on AWS EKS using CDK for Kubernetes"
 
                 }]
               }
