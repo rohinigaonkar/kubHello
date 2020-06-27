@@ -1,3 +1,5 @@
+You can find the PPT of my session at https://www.slideshare.net/rohinigaonkar/infrastructure-as-code-with-aws-cloud-development-kit-cdk
+
 # kubHello
 CDK8s Hello Sample app. 
 
